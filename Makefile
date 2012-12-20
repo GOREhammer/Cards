@@ -22,6 +22,12 @@ Deck.o: Deck.h Deck.cpp
 clean:
 	rm *.o *~ Main
 	
+again: 
+	make clean ; make Main
+
+heapcheck:
+	valgrind ./Main
+	
 # OTHER NOTES:
 # $* for remove suffix on a target without a suffix produces the empty string
 

@@ -1,15 +1,20 @@
 #ifndef DECK_H
 #define DECK_H
 #include "Card.h"
+#include <vector>
+#include <string>
+
+using namespace std;
 
 class Deck{
-	Card *cards;
-	const Card *topCard;
+	vector<Card*> cards;
 public:
 	Deck();
 	~Deck();
 
-	void Shuffle();
+	void shuffle(void);
+	string printDeck(void);
+	
 	
 };
 

@@ -1,26 +1,25 @@
 #ifndef CARD_H
 #define CARD_H
+#include <string>
 
-enum Type{diamonds, hearts, spades, clubs};
+using namespace std;
 
-enum Color{black, red};
+enum Suit{diamonds = 0, hearts, spades, clubs};
 
-enum Value{one, two, three, four, five, six, seven, eight, nine, ten,
+enum Color{black = 0, red};
+
+enum Value{one = 0, two, three, four, five, six, seven, eight, nine, ten,
 		 J, Q, K, A};
 
-struct Suit{
-	Type type;
-	Color color;	
-};
-
 class Card{
-	Suit *suit;
+	Suit suit;
 	Value value;
+	Color color;
 
 	public:
-	Card();
-	Card(Type type, Color color, Value value);
-	~Card();
+	Card(Suit suit, Value value);
+	
+	string printCard(void);
 		
 	
 };
