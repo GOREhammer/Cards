@@ -3,9 +3,9 @@
 #include "Card.h"
 
 class Hand{
-	Card *cards;
+	vector<Card*> cards;
 public:
-	Hand(Card *cards);
+	Hand(vector<Card*> cards;);
 	~Hand();
 
 	Card* removeCards(const int *indicies);
